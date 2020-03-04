@@ -1,28 +1,30 @@
 package com.company;
 
 public class BankAccount {
-    double amount = 0;
+    double amount;
 
 
     public double getAmount() {
         return amount;
     }
 
-    public double deposit(double sum) {
+    public void deposit(double sum) {
         amount = sum + amount;
         System.out.println(getAmount());
-        return amount;
     }
 
-    public double withdraw(int sum)
+    public void withdraw(int sum)
             throws LimitException {
         if (sum > amount) {
             throw new LimitException("Сумма снятия превышает остаток на счету!", amount);
+        } else {
+            amount = amount - sum;
+            System.out.println(amount);
         }
-        amount = amount - sum;
-        System.out.println(amount);
-        return amount;
+        if (sum > amount) {
+            System.out.println(amount = amount - amount);
+        }
+
+
     }
-
-
 }
