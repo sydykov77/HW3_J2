@@ -2,11 +2,15 @@ package com.company;
 
 public class LimitException extends Exception {
 
-    private double remainingAmount;
+    double remainingAmount;
 
     public LimitException(String message, double remainingAmount) {
         super(message);
         this.remainingAmount = remainingAmount;
+    }
+
+    public LimitException() {
+
     }
 
     @Override

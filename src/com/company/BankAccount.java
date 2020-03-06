@@ -13,17 +13,16 @@ public class BankAccount {
         System.out.println(getAmount());
     }
 
-    public void withdraw(int sum)
+    public void withdraw(double sum)
             throws LimitException {
         if (sum > amount) {
             throw new LimitException("Сумма снятия превышает остаток на счету!", amount);
+
         } else {
             amount = amount - sum;
             System.out.println(amount);
         }
-        if (sum > amount) {
-            System.out.println(amount = amount - amount);
-        }
+
 
 
     }
